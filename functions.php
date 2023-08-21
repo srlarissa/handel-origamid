@@ -11,4 +11,9 @@
    }
    add_action('wp_enqueue_scripts', 'handel_add_style');
 
+   function handel_custom_images(){
+     update_option('medium_crop', 1);
+   }
+   add_action('after_setup_theme', 'handel_custom_images');
+
 ?>
