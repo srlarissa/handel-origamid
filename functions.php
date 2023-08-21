@@ -17,4 +17,9 @@
    }
    add_action('after_setup_theme', 'handel_custom_images');
 
+   function handel_loop_shop_per_page(){
+     return 6;
+   }
+   add_filter('loop_shop_per_page', 'handel_loop_shop_per_page');
+
 ?>
