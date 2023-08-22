@@ -2,7 +2,7 @@
     margin: 30px auto;
     padding: 0 20px;
     display:grid;
-    grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(270px,auto);
+    grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px,auto);
     justify-content: space-between;
     align-items: center;
     grid-gap: 40px;
@@ -39,4 +39,51 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
+}
+
+.conta {
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: auto auto;
+}
+
+@media (max-width: 800px){
+    .conta{
+        grid-gap: 40px;
+        justify-content: start;
+    }
+}
+
+.conta .minha-conta,
+.conta .carrinho{
+    padding: 5px 0px 5px 34px;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+.conta .carrinho{
+    background-image: url('../img/icons/cart.svg');
+    position: relative;
+}
+
+.conta .minha-conta{
+    background-image: url('../img/icons/user.svg');
+}
+
+.carrinho-count{
+    display:block;
+    border-radius: 50%;
+    width: 16px;
+    height:16px;
+    background-color: orangered;
+    color: #FFF;
+    font-size: .7rem;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    position:absolute;
+    top:0px;
+    left:5px;
 }
