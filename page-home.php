@@ -17,7 +17,7 @@
                         'name' => $product->get_name(),
                         'preco' => $product->get_price_html(),
                         'link' => $product->get_permalink(),
-                        'img' => wp_get_attachment_image_src()
+                        'img' => wp_get_attachment_image_src($product -> get_image_id(), 'slide')[0],
                     ];
                 }
                 return $products_final;
@@ -33,7 +33,13 @@
             if(have_posts()) { while(have_posts()){ the_post();
     ?>
 
-
+                <section class="slide-wrapper">
+                    <ul class="slide">
+                        <?php foreach($slide as $product) {?>
+                            <li><?= $product['name'] ?></li>
+                        <?php } ?>
+                    </ul>
+                </section>
 
     <?php
             } }
