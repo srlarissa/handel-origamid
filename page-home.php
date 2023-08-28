@@ -28,21 +28,27 @@
             print_r($slide);
         ?>
     </pre>
-    <?php
-
-            if(have_posts()) { while(have_posts()){ the_post();
-    ?>
+    <?php if(have_posts()) { while(have_posts()){ the_post();?>
 
                 <section class="slide-wrapper">
                     <ul class="slide">
                         <?php foreach($slide as $product) {?>
-                            <li><?= $product['name'] ?></li>
+                            <li class="slide-item">
+                                <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
+                                <div class="slide-info">
+                                    <span class="slide-preco">
+                                        <?= $product['preco']; ?>
+                                    </span>
+                                    <span class="slide-nome">
+                                        <?= $product['name']; ?>
+                                    </span>
+                                    <a href="<?= $product['link']; ?>" class="slide-link">Ver produto</a>
+                                </div>
+                            </li>
                         <?php } ?>
                     </ul>
                 </section>
 
-    <?php
-            } }
+    <?php } } ?>
         
-        get_footer();
-    ?>
+    <?php get_footer();?>
