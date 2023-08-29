@@ -64,7 +64,7 @@
                                     <span class="slide-nome">
                                         <?= $product['name']; ?>
                                     </span>
-                                    <a href="<?= $product['link']; ?>" class="slide-link">Ver produto</a>
+                                    <a href="<?= $product['link']; ?>" class="btn-link">Ver produto</a>
                                 </div>
                             </li>
                         <?php } ?>

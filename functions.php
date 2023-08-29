@@ -34,7 +34,7 @@
                       <span><?= $product['price']; ?></span>
                   </div>
                   <div class="product-overlay">
-                      <span>Ver mais</span>
+                      <span class="btn-link">Ver mais</span>
                   </div>
               </a>
           </li>

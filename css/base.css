@@ -36,3 +36,20 @@ img{
 .hidden{
     display:none;
 }
+
+.btn-link{
+    padding: 15px;
+    background-color: #FFF;
+    max-width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-link::after{
+    content:'';
+    display: block;
+    background: url('../img/icons/arrow.svg') no-repeat center center;
+    width: 18px;
+    height: 18px;
+}
