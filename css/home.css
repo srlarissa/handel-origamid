@@ -35,7 +35,7 @@
 .slide-link::after{
     content:'';
     display: block;
-    background: url('../img/icons/arrow.svg');
+    background: url('../img/icons/arrow.svg') no-repeat center right;
     width: 18px;
     height: 18px;
 }
