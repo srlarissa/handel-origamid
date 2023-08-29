@@ -1,0 +1,32 @@
+/* LISTA DE PRODUTOS */
+
+.products-list{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.products-list h2{
+    margin-top: 5px;
+    font-size: 0.725rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.products-list a{
+    display: grid;
+}
+
+.product-info{
+    grid-area:1/1;
+}
+
+.product-overlay{
+    grid-area: 1/1;
+    background: rgba(255,255,255, .5);
+    display:flex;
+}
+
+.product-overlay span {
+    margin: auto;
+}
