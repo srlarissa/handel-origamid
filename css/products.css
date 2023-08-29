@@ -25,8 +25,15 @@
     grid-area: 1/1;
     background: rgba(255,255,255, .5);
     display:flex;
+    padding:20px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.product-item a:hover .product-overlay{
+    opacity: 1;
 }
 
-.product-overlay span {
+.product-overlay .btn-link {
     margin: auto;
+    width:100%;
 }
