@@ -58,9 +58,8 @@
                 ];
             }
 
-            print_r(handel_get_product_category_data($categoria_esquerda));
-            print_r(handel_get_product_category_data($categoria_direita));           
-
+            $data['categorias'][$categoria_esquerda] = handel_get_product_category_data($categoria_esquerda);
+            $data['categorias'][$categoria_direita] = handel_get_product_category_data($categoria_direita);
         ?>
     </pre>
     <?php if(have_posts()) { while(have_posts()){ the_post();?>
@@ -93,6 +92,15 @@
                 <section class="container">
                     <h1 class="subtitulo">Lançamentos</h1>
                     <?php handel_product_list($data['lancamentos']); ?>
+                </section>
+
+                <section class="categorias">
+                    <?php foreach($data['categorias'] as $categoria) {?>
+                        <a href="<?= $categoria['link']; ?>">
+                            <img src="<?= $categoria['img']; ?>" alt="<?= $categoria['name'] ?>">
+                            <span class="btn-link"><?= $categoria['name']; ?></span>
+                        </a>
+                    <?php }?>
                 </section>
 
                 <section class="container">
