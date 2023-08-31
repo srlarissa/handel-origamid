@@ -17,6 +17,13 @@
     display: grid;
 }
 
+@media (max-width: 800px){
+    .products-list{
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
 .product-info{
     grid-area:1/1;
 }
