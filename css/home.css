@@ -32,6 +32,16 @@
     background-color: #000;
 }
 
+@media (max-width:800px){
+    .slide-item{
+        grid-template-columns: 1fr;
+    }
+
+    .slide-info{
+        margin-top:20px;
+    }
+}
+
 .slide-info{
     padding: 0 10px 40px 20px;
     color: #FFF;
