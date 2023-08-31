@@ -94,7 +94,7 @@
                     <?php handel_product_list($data['lancamentos']); ?>
                 </section>
 
-                <section class="categorias">
+                <section class="categorias-home">
                     <?php foreach($data['categorias'] as $categoria) {?>
                         <a href="<?= $categoria['link']; ?>">
                             <img src="<?= $categoria['img']; ?>" alt="<?= $categoria['name'] ?>">
