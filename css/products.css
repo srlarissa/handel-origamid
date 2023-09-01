@@ -93,3 +93,49 @@
     background-color: #FFF;
     color:#000;
 }
+
+/* FILTROS */
+
+.filtro,
+.filtro .widget{
+    margin-bottom:40px;
+}
+
+.filtro-titulo,
+.filtro .widget h2{
+    font-size: 1.125rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.filtro-preco input{
+    font-size: 1rem;
+    width: 80px;
+    border:none;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 5px;
+}
+
+.filtro-preco label{
+    width: 60px;
+    display:inline-block;
+    margin-bottom: 10px;
+}
+
+.filtro-preco button{
+    font-size: 1rem;
+    width: 144px;
+    height: 36px;
+    border:none;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 4px;
+    cursor:pointer;
+}
+
+@media (max-width: 800px){
+    .filtro{
+        margin-top: 40px;
+        grid-row: 2;
+    }
+}
