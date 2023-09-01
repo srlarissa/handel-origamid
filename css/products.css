@@ -44,3 +44,52 @@
     margin: auto;
     width:100%;
 }
+
+/* BREADCRUMB */
+
+.breadcrumb{
+    margin: 20px auto!important;
+    font-size: 0.875rem!important;
+    font-weight: 500!important;
+    letter-spacing: 0.05rem!important;
+}
+.woocommerce-breadcrumb{
+    padding-bottom: 20px!important;
+    border-bottom: 2px solid #000;
+}
+
+/* ARQUIVO DE PRODUTOS */
+
+.products-archive{
+    display:grid;
+    grid-template-columns: 220px 1fr;
+}
+
+@media (max-width:800px){
+    .products-archive{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PAGINAÇÃO */
+
+.pagination{
+    margin-top:40px;
+}
+
+.pagination .page-numbers{
+    border-radius:2px;
+    background-color: #000;
+    color:#FFF;
+    padding:4px 10px;
+}
+
+.pagination span.page-numbers{
+    background-color: orangered;
+}
+
+.pagination .next,
+.pagination .prev{
+    background-color: #FFF;
+    color:#000;
+}
