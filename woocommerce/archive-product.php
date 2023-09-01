@@ -17,13 +17,15 @@
     <main>
         <?php 
             if($data['products']) {
-                handel_product_list($data['products']); 
+                handel_product_list($data['products']);
+                echo get_the_posts_pagination(); 
             }else{ 
         ?>
            
                 <p>Nenhum resultado para a sua busca.</p>
 
         <?php } ?>
+        <?php ?>
     </main>
 </article>
 <?php get_footer(); ?>
