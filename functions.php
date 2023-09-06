@@ -22,6 +22,19 @@
    }
    add_filter('loop_shop_per_page', 'handel_loop_shop_per_page');
 
+   function remove_some_body_classes($classes){
+      $woo_class = array_search('woocommerce', $classes);
+      $woopage_class = array_search('woocommerce-page', $classes);
+      $search = in_array('archive', $classes) || in_array('product-template-default', $classes);
+
+      if($woo_class && $woopage_class && $search){
+        unset($classes[$woo_class]);
+        unset($classes[$woopage_class]);
+      }
+      return $classes;
+   };
+   add_filter('body_class', 'remove_some_body_classes');
+
    function handel_product_list($products) { ?>
 
     <ul class="products-list">
