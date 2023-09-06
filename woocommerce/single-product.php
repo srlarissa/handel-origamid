@@ -45,7 +45,27 @@
                    <img data-gallery="list"src="<?= $img; ?>" alt="<?= $produto['name']?>"> 
                 <?php } ?>
             </div>
+            <div class="produto-gallery-main">
+                <img data-gallery="main" src="<?= $produto['img'] ?>" alt="<?= $produto['name'] ?>">
+            </div>
+            <div class="product-info">
+                <small><?= $produto['sku'] ?></small>
+                <h1><?= $produto['name'] ?></h1>
+                <p class="product-price"><?= $produto['price'] ?></p>
+                <?php woocommerce_template_single_add_to_cart(); ?>
+                <h2>Descrição</h2>
+                <p><?= $produto['description'] ?></p>
+            </div>
         </div>
     </main>
+<?php 
+   $related_ids = wc_get_related_products($produto['id'], 6);
+   $related_products = [];
+   foreach($related_ids as $product_id) {
+        $related_products[] = wc_get_product($product_id);
+   }
+   $format_related_products = handel_format_products($related_products);
+   handel_product_list($format_related_products);
+?>
 
 <?php   get_footer();   ?>
